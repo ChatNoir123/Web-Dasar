@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfolio • Bagus</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="assets/styles/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-top">
+        <a class="logo" href="#home" aria-label="Beranda">Portofolio</a>
+
+        <button
+          class="nav-toggle"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+        >
+          ☰ Menu
+        </button>
+
+        <nav id="primary-nav" aria-label="Navigasi utama">
+          <ul class="nav-list">
+            <li><a href="#home" class="nav-link">Beranda</a></li>
+            <li><a href="#about" class="nav-link">Tentang Saya</a></li>
+            <li><a href="#services" class="nav-link">Layanan</a></li>
+            <li><a href="#contact" class="nav-link">Kontak</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="hero" id="home">
+        <img
+          src="assets/img/profile.jpg"
+          alt="Foto profil Bagus"
+          width="160"
+          height="160"
+          loading="eager"
+        />
+        <h1>Halo, Saya Bagus</h1>
+        <p>
+          Web developer yang membangun website elegan, cepat, dan responsif.
+        </p>
+      </div>
+    </header>
+
+    <main>
+      <div id="content">
+        <article class="card" aria-labelledby="title-beranda">
+          <h2 id="title-beranda">Beranda</h2>
+          <p>
+            Selamat datang di portofolio saya. Di sini Anda menemukan informasi
+            tentang latar belakang, keahlian, serta karya yang pernah saya buat.
+            Fokus saya: solusi web yang bermanfaat, cepat, dan mudah digunakan.
+          </p>
+          <p>
+            Telusuri <a href="#about"><strong>Tentang Saya</strong></a
+            >, <a href="#services"><strong>Layanan</strong></a
+            >, dan <a href="#contact"><strong>Kontak</strong></a> untuk
+            kolaborasi.
+          </p>
+        </article>
+        <article class="card" aria-labelledby="title-profil">
+          <h2 id="title-profil" class="visually-hidden">Profil & Layanan</h2>
+          <section id="portfolio" aria-labelledby="portfolio-title">
+            <h3 id="portfolio-title">Portofolio</h3>
+            <div
+              class="filter-controls"
+              role="tablist"
+              aria-label="Filter proyek"
+            >
+              <button
+                class="chip active"
+                data-filter="all"
+                role="tab"
+                aria-selected="true"
+              >
+                Semua
+              </button>
+              <button
+                class="chip"
+                data-filter="web"
+                role="tab"
+                aria-selected="false"
+              >
+                Web
+              </button>
+              <button
+                class="chip"
+                data-filter="uiux"
+                role="tab"
+                aria-selected="false"
+              >
+                UI/UX
+              </button>
+            </div>
+
+            <div id="project-grid" class="project-grid" role="list"></div>
+          </section>
+          <section id="experience" aria-labelledby="exp-title">
+            <h3 id="exp-title">Pengalaman & Pendidikan</h3>
+            <ol class="timeline">
+              <li>
+                <div class="tl-point"></div>
+                <div class="tl-content">
+                  <h4>Frontend Developer (Freelance)</h4>
+                  <p class="muted">2023 — sekarang</p>
+                  <p>
+                    Mengerjakan landing page bisnis, dashboard internal, dan
+                    integrasi API.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div class="tl-point"></div>
+                <div class="tl-content">
+                  <h4>Magang Web Developer</h4>
+                  <p class="muted">2022</p>
+                  <p>
+                    Membangun modul autentikasi dan halaman admin sederhana.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div class="tl-point"></div>
+                <div class="tl-content">
+                  <h4>Pendidikan Teknik Informatika</h4>
+                  <p class="muted">2019 — 2023</p>
+                  <p>Fokus pada pengembangan aplikasi web dan dasar UI/UX.</p>
+                </div>
+              </li>
+            </ol>
+          </section>
+          <section id="certificates" aria-labelledby="cert-title">
+            <h3 id="cert-title">Sertifikat</h3>
+            <ul class="cert-list">
+              <li>
+                <strong>Front-End Web Developer</strong> — (contoh) Platform X
+                (2024)
+              </li>
+              <li>
+                <strong>UI/UX Fundamentals</strong> — (contoh) Platform Y (2023)
+              </li>
+            </ul>
+          </section>
+          <section id="faq" aria-labelledby="faq-title">
+            <h3 id="faq-title">FAQ</h3>
+            <details>
+              <summary>Apakah menerima proyek kustom?</summary>
+              <p>
+                Ya. Kirim kebutuhan Anda via formulir kontak atau WhatsApp untuk
+                estimasi.
+              </p>
+            </details>
+            <details>
+              <summary>Teknologi yang biasa digunakan?</summary>
+              <p>
+                HTML, CSS, JavaScript, React/Vue di frontend; Node.js/PHP untuk
+                backend sederhana.
+              </p>
+            </details>
+            <details>
+              <summary>Berapa lama pengerjaan standar?</summary>
+              <p>
+                Landing page 3–7 hari; fitur khusus bergantung kompleksitas.
+              </p>
+            </details>
+          </section>
+
+          <section id="about" aria-labelledby="about-title">
+            <h3 id="about-title">Tentang Saya</h3>
+            <p>
+              Saya <strong>Bagus</strong>, web developer yang menggabungkan
+              estetika desain dengan performa dan aksesibilitas. Tech stack:
+              <em>HTML, CSS, JavaScript</em>, serta framework modern.
+            </p>
+          </section>
+
+          <section id="services" aria-labelledby="services-title">
+            <h3 id="services-title">Layanan</h3>
+
+            <button
+              class="btn-details"
+              data-target="#services-detail"
+              aria-expanded="false"
+            >
+              Tampilkan detail layanan
+            </button>
+
+            <div id="services-detail" hidden>
+              <div class="service-list">
+                <div class="service-item">
+                  <h4>Web Development</h4>
+                  <p>
+                    Membangun website modern, responsif, dan ramah pengguna.
+                  </p>
+                </div>
+                <div class="service-item">
+                  <h4>UI/UX Design</h4>
+                  <p>Antarmuka menarik dan alur yang intuitif.</p>
+                </div>
+                <div class="service-item">
+                  <h4>Maintenance & Optimization</h4>
+                  <p>
+                    Perawatan, optimasi kecepatan, dan peningkatan keamanan.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="contact" aria-labelledby="contact-title">
+            <h3 id="contact-title">Kontak</h3>
+            <p>Gunakan formulir berikut atau hubungi melalui info di bawah.</p>
+
+            <form class="contact-form" action="#" method="post" novalidate>
+              <label for="name">Nama</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Masukkan nama Anda"
+                required
+              />
+
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Masukkan email Anda"
+                required
+              />
+
+              <label for="message">Pesan</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="Tulis pesan Anda..."
+                required
+              ></textarea>
+
+              <button type="submit">Kirim Pesan</button>
+            </form>
+
+            <div class="contact-info" role="list">
+              <p role="listitem"><strong>Email:</strong> bagus@example.com</p>
+              <p role="listitem">
+                <strong>WhatsApp:</strong> +62 812-3456-7890
+              </p>
+              <p role="listitem"><strong>Alamat:</strong> Blora, Jawa Tengah</p>
+            </div>
+          </section>
+        </article>
+      </div>
+      <aside class="sidebar" aria-label="Informasi tambahan">
+        <figure class="profile-media">
+          <img
+            src="assets/img/profile.jpg"
+            alt="Foto Bagus di sidebar"
+            width="300"
+            height="300"
+            loading="lazy"
+          />
+          <figcaption>Bagus — Web Developer</figcaption>
+        </figure>
+
+        <section>
+          <h2>Keahlian</h2>
+          <ul id="skills-list"></ul>
+        </section>
+
+        <section>
+          <h2>Kutipan</h2>
+          <blockquote>
+            “Code is like humor. When you have to explain it, it’s bad.”
+          </blockquote>
+        </section>
+
+        <section>
+          <h2>Link Cepat</h2>
+          <ul>
+            <li><a href="#about">Tentang Saya</a></li>
+            <li><a href="#services">Layanan</a></li>
+            <li><a href="#contact">Kontak</a></li>
+          </ul>
+        </section>
+        <section aria-labelledby="sosmed-title">
+          <h2 id="sosmed-title">Media Sosial</h2>
+          <ul class="social-links">
+            <li>
+              <a
+                class="btn-soc ig"
+                href=""
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+              >
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <rect
+                    x="3"
+                    y="3"
+                    width="18"
+                    height="18"
+                    rx="5"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="4"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                  <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" />
+                </svg>
+                <span>Instagram</span>
+              </a>
+            </li>
+            <li>
+              <a
+                class="btn-soc fb"
+                href=""
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+              >
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M13 3h3a1 1 0 0 1 1 1v3h-3a2 2 0 0 0-2 2v3h5l-1 4h-4v7h-4v-7H6v-4h3V9a5 5 0 0 1 5-5Z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <span>Facebook</span>
+              </a>
+            </li>
+            <li>
+              <a
+                class="btn-soc li"
+                href=""
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              >
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <rect
+                    x="3"
+                    y="3"
+                    width="18"
+                    height="18"
+                    rx="3"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                  <rect
+                    x="6.5"
+                    y="10"
+                    width="3"
+                    height="8"
+                    fill="currentColor"
+                  />
+                  <rect
+                    x="6.5"
+                    y="6.5"
+                    width="3"
+                    height="2.8"
+                    fill="currentColor"
+                  />
+                  <path
+                    d="M13 10h2.6a3.4 3.4 0 0 1 3.4 3.4V18h-3v-4.2c0-.85-.55-1.6-1.6-1.6H13V18h-3v-8h3Z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <span>LinkedIn</span>
+              </a>
+            </li>
+            <li>
+              <a
+                class="btn-soc gh"
+                href=""
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+              >
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M12 2C6.5 2 2 6.6 2 12.2c0 4.5 2.9 8.3 6.8 9.6.5.1.7-.2.7-.5v-2c-2.8.6-3.4-1.2-3.4-1.2-.5-1.2-1.2-1.6-1.2-1.6-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 .1.8-.8 1.8-1.2-2.2-.3-4.5-1.1-4.5-5 0-1.1.4-2 1.1-2.8-.1-.3-.5-1.4.1-2.9 0 0 .9-.3 2.9 1.1a9.7 9.7 0 0 1 5.3 0c2-1.4 2.9-1.1 2.9-1.1.6 1.5.3 2.6.1 2.9.7.7 1.1 1.7 1.1 2.8 0 3.9-2.3 4.7-4.5 5 .9.6 1.8 2 1.8 4v3c0 .3.2.6.7.5 3.9-1.3 6.8-5.1 6.8-9.6C22 6.6 17.5 2 12 2Z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <span>GitHub</span>
+              </a>
+            </li>
+            <li>
+              <a
+                class="btn-soc yt"
+                href=""
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="YouTube"
+              >
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M23 12s0-4-1-5a4 4 0 0 0-3-2C16 4 12 4 12 4s-4 0-7 1a4 4 0 0 0-3 2c-1 1-1 5-1 5s0 4 1 5a4 4 0 0 0 3 2c3 1 7 1 7 1s4 0 7-1a4 4 0 0 0 3-2c1-1 1-5 1-5Z"
+                    fill="currentColor"
+                  />
+                  <path d="M10 9.5v5l4.5-2.5L10 9.5Z" fill="#fff" />
+                </svg>
+                <span>YouTube</span>
+              </a>
+            </li>
+            <li>
+              <a
+                class="btn-soc wa"
+                href=""
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp"
+              >
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M20 12a8 8 0 0 1-11.9 7l-3.1.8.8-3A8 8 0 1 1 20 12Z"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M8.8 8.9c-.3.3-.6 1.5.7 3s2.6 1.8 3 1.8.8-.2 1-.5l.5-.6c.2-.2.2-.5 0-.8l-.7-1c-.2-.3-.5-.3-.8-.2l-.7.3c-.5-.3-.9-.6-1.3-1l-.2-.2c-.2-.4 0-.7.2-.9l.5-.5c.2-.2.2-.6 0-.8l-.8-.8c-.3-.3-.6-.3-.9 0l-.5.5Z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <span>WhatsApp</span>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </aside>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; <span id="year"></span> Bagus. Semua hak dilindungi.</p>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+      const navToggle = document.querySelector(".nav-toggle");
+      const nav = document.getElementById("primary-nav");
+      navToggle.addEventListener("click", () => {
+        const expanded = navToggle.getAttribute("aria-expanded") === "true";
+        navToggle.setAttribute("aria-expanded", String(!expanded));
+        nav.classList.toggle("open");
+      });
+      const skills = [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "Responsive Web Design",
+        "React / Vue",
+        "Node.js / PHP / Python",
+        "UI/UX & Design Thinking",
+      ];
+      const ul = document.getElementById("skills-list");
+      skills.forEach((s) => {
+        const li = document.createElement("li");
+        li.textContent = s;
+        ul.appendChild(li);
+      });
+      const btn = document.querySelector(".btn-details");
+      const panel = document.querySelector(btn.dataset.target);
+      btn.addEventListener("click", () => {
+        const isHidden = panel.hasAttribute("hidden");
+        if (isHidden) panel.removeAttribute("hidden");
+        else panel.setAttribute("hidden", "");
+        btn.setAttribute("aria-expanded", String(isHidden));
+      });
+    </script>
+    <script>
+      const projects = [
+        {
+          title: "Company Landing",
+          category: "web",
+          stack: ["HTML", "CSS", "JS"],
+          link: "#",
+        },
+        {
+          title: "Dashboard UI",
+          category: "uiux",
+          stack: ["Figma"],
+          link: "#",
+        },
+        {
+          title: "Catalog Site",
+          category: "web",
+          stack: ["JS", "API"],
+          link: "#",
+        },
+        {
+          title: "Mobile Wireframe",
+          category: "uiux",
+          stack: ["Figma"],
+          link: "#",
+        },
+      ];
+
+      const grid = document.getElementById("project-grid");
+      function renderProjects(filter = "all") {
+        if (!grid) return;
+        grid.innerHTML = "";
+        projects
+          .filter((p) => filter === "all" || p.category === filter)
+          .forEach((p) => {
+            const card = document.createElement("article");
+            card.className = "proj-card";
+            card.setAttribute("role", "listitem");
+            card.innerHTML = `
+          <h4>${p.title}</h4>
+          <p class="muted">${p.stack.join(", ")}</p>
+          <a class="btn-sm" href="${
+            p.link
+          }" target="_blank" rel="noopener">Lihat Proyek</a>
+        `;
+            grid.appendChild(card);
+          });
+      }
+      renderProjects();
+
+      document.querySelectorAll(".filter-controls .chip").forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          document.querySelectorAll(".filter-controls .chip").forEach((b) => {
+            b.classList.remove("active");
+            b.setAttribute("aria-selected", "false");
+          });
+          e.currentTarget.classList.add("active");
+          e.currentTarget.setAttribute("aria-selected", "true");
+          renderProjects(e.currentTarget.dataset.filter);
+        });
+      });
+    </script>
+  </body>
+</html>
